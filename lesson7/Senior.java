@@ -14,7 +14,7 @@ public class Senior implements Observer {
 
     @Override
     public void newReceiveOffer(Vacancy vacancy) {
-        if (this.salary < salary){
+        if (this.salary < vacancy.getSalary()){
             System.out.printf("Старший пециалист %s >>> Мне нужна эта работа! [%s - %f]\n",
                     name, vacancy.getNameCompany(), vacancy.getSalary());
             this.salary = vacancy.getSalary();
